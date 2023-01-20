@@ -7,18 +7,20 @@ function pigLatin(arg) {
           break;
       } else {
           if (x[i] === 'a' || x[i] === 'e' || x[i] === 'i' || x[i] === 'o' || x[i] === 'u') {
-              console.log('starts with consonant');
-              console.log("number of consonants:" + ' ' + (i))
-              let xConsonants = x.splice(0, i)
-              let xToPigLatin = x.concat(xConsonants).join('') + 'ay';
-              console.log(xToPigLatin);
+            consonantsFunc(i, x);
           break;
           }
       }
   }
 };
 
-
+function consonantsFunc(i, x) {
+  console.log('starts with consonant');
+  console.log("number of consonants:" + ' ' + (i))
+  let xConsonants = x.splice(0, i)
+  let xToPigLatin = x.concat(xConsonants).join('') + 'ay';
+  console.log(xToPigLatin);
+};
 
 
 // for(let i = 0; i < 3; i ++){ 
