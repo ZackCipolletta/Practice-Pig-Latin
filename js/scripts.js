@@ -9,17 +9,14 @@ function pigLatin(arg) {
           if (x[i] === 'a' || x[i] === 'e' || x[i] === 'i' || x[i] === 'o' || x[i] === 'u') {
               console.log('starts with consonant');
               console.log("number of consonants:" + ' ' + (i))
+              let xConsonants = x.splice(0, i)
+              let xToPigLatin = x.concat(xConsonants).join('') + 'ay';
+              console.log(xToPigLatin);
           break;
           }
       }
   }
 };
-
-// function consonantsFunc() {
-//     if (x[i] === 'a' || x[i] === 'e' || x[i] === 'i' || x[i] === 'o' || x[i] === 'u') {
-//         console.log("hit a vowel at index:" + ' ' + (i))
-//     }
-// }
 
 
 
